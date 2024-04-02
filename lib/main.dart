@@ -4,6 +4,7 @@ import 'package:flutter_final_project_food_order/ui/cubits/DetailsPageCubit.dart
 import 'package:flutter_final_project_food_order/ui/cubits/HomePageCubit.dart';
 import 'package:flutter_final_project_food_order/ui/cubits/SepetPageCubit.dart';
 import 'package:flutter_final_project_food_order/ui/view/home_page.dart';
+import 'package:flutter_final_project_food_order/ui/view/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: const HomePage(),
+          home:  SplashScreen(),
         ),
 
     );

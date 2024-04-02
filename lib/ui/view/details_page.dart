@@ -162,6 +162,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             TextButton(
                               onPressed: () {
                                 Navigator.of(context).pop(); // Geri gitme işlemi
+                                Navigator.of(context).pop();
                               },
 
                               child: Text("Ürün Ekle"),
