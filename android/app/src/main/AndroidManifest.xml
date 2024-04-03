@@ -2,8 +2,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:label="flutter_final_project_food_order"
-        android:name="Mutlu Göbekler"
+        android:label="Mutlu Göbekler"
         android:icon="@mipmap/logo">
         <activity
             android:name=".MainActivity"
