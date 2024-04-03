@@ -12,7 +12,7 @@ class DetailsPageCubit extends Cubit<void> {
 
   Future<void> addChart(String foodname,String image,int fiyat,int adet,String kullanici_adi) async
   {
-    await fRepo.addChart(foodname,image,fiyat,adet,"emreG");
+    await fRepo.addChart(foodname,image,fiyat,adet,kullanici_adi);
   }
 
 

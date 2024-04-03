@@ -43,7 +43,7 @@ class FoodRepository {
       "yemek_resim_adi": image,
       "yemek_fiyat": fiyat,
       "yemek_siparis_adet": adet,
-      "kullanici_adi": "emreG"
+      "kullanici_adi": kullanici_adi
     };
     var response = await Dio().post(baseUrl, data: FormData.fromMap(veri));
   }
@@ -59,9 +59,9 @@ class FoodRepository {
 
 
   //DELETE
-  Future<void> deleteFood(int sepetfoodId) async{
+  Future<void> deleteFood(int sepetfoodId,String kullanici) async{
     var baseurl = "http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php";
-    var veri = {"sepet_yemek_id":sepetfoodId,"kullanici_adi":"emreG"};
+    var veri = {"sepet_yemek_id":sepetfoodId,"kullanici_adi":kullanici};
     var response = await Dio().post(baseurl,data: FormData.fromMap(veri));
 
   }

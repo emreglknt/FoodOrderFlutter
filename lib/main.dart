@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_final_project_food_order/ui/cubits/DetailsPageCubit.dart';
@@ -6,7 +7,9 @@ import 'package:flutter_final_project_food_order/ui/cubits/SepetPageCubit.dart';
 import 'package:flutter_final_project_food_order/ui/view/home_page.dart';
 import 'package:flutter_final_project_food_order/ui/view/splash.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized(); // Flutter binding'lerini başlat.
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -16,6 +19,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MultiBlocProvider(
         providers:[
           BlocProvider(create: (context)=>HomePageCubit()),

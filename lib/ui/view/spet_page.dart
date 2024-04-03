@@ -6,19 +6,21 @@ import 'package:flutter_final_project_food_order/ui/cubits/SepetPageCubit.dart';
 import 'package:lottie/lottie.dart';
 
 class SepetPage extends StatefulWidget {
-  const SepetPage({super.key});
+  final String username;
 
+
+  SepetPage(this.username);
 
   @override
   State<SepetPage> createState() => _SepetPageState();
 }
 
 class _SepetPageState extends State<SepetPage> {
-  String kullanici = "emreG";
+
   @override
   void initState() {
     super.initState();
-    context.read<SepetPageCubit>().loadSepetFoods(kullanici);
+    context.read<SepetPageCubit>().loadSepetFoods(widget.username);
   }
 
   @override
@@ -90,7 +92,7 @@ class _SepetPageState extends State<SepetPage> {
                                                   action:  SnackBarAction(
                                                     label: "Yes",
                                                     onPressed: (){
-                                                      context.read<SepetPageCubit>().deleteFood(sepetfood.sepetfoodId);
+                                                      context.read<SepetPageCubit>().deleteFood(sepetfood.sepetfoodId,widget.username);
                                                     },
                                                   ),
                                                 )

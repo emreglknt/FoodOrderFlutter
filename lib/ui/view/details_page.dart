@@ -8,8 +8,9 @@ import 'package:flutter_final_project_food_order/ui/view/spet_page.dart';
 
 class DetailsPage extends StatefulWidget {
   final Food food;
+  final String username;
 
-  DetailsPage({required this.food, Key? key}) : super(key: key);
+  DetailsPage({required this.food,required this.username, Key? key}) : super(key: key);
 
   @override
   State<DetailsPage> createState() => _DetailsPageState();
@@ -150,7 +151,7 @@ class _DetailsPageState extends State<DetailsPage> {
                 ElevatedButton.icon(
                   onPressed: () {
                     // sepete eklemeyi çalıştırır. ürünleri sepete kayıt eder.
-                    context.read<DetailsPageCubit>().addChart(widget.food.foodName,widget.food.foodImage,widget.food.foodPrice,_quantity,"emreG");
+                    context.read<DetailsPageCubit>().addChart(widget.food.foodName,widget.food.foodImage,widget.food.foodPrice,_quantity,widget.username);
                     showDialog(
                       context: context,
                       builder: (BuildContext context) {
@@ -172,7 +173,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => SepetPage(),
+                                    builder: (context) => SepetPage(widget.username),
                                   ),
                                 );
                               },
