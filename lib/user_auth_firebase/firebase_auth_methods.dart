@@ -35,6 +35,7 @@ class FirebaseAuthService {
         Fluttertoast.showToast(msg: 'An error occurred: ${e.code}');
       }
 
+
     }
     return null;
 

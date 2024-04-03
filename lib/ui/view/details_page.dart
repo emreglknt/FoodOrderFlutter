@@ -177,6 +177,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                   ),
                                 );
                               },
+
                               child: Text("Sepete Git"),
                             ),
                           ],

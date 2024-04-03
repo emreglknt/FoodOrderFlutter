@@ -92,6 +92,7 @@ class _SignupPageState extends State<SignupPage> {
                 keyboardType: TextInputType.emailAddress,
               ),
               SizedBox(height: 16.0),
+
               TextField(
                 controller: _passwordController,
                 decoration: InputDecoration(

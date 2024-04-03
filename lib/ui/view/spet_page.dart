@@ -95,6 +95,7 @@ class _SepetPageState extends State<SepetPage> {
                                                       context.read<SepetPageCubit>().deleteFood(sepetfood.sepetfoodId,widget.username);
                                                     },
                                                   ),
+
                                                 )
                                             );
                                           },
