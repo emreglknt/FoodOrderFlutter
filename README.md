@@ -1,6 +1,6 @@
 # flutter_final_project_food_order
 
-A new Flutter project.
+A new Flutter Food Order project with Firebase (Login , Signup) , Dio methods with API operations and Bloc Pattern with Cubits.
 
 ## Getting Started
 
